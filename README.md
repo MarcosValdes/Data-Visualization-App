@@ -1,6 +1,14 @@
 # Data-Visualization-App
 Visualization Project for Data Analysis
 
+# How to have access to the Dashboard
+You can now view your Streamlit app in your browser.
+
+Network URL: http://10.214.238.184:8501
+
+External URL: http://44.226.122.3:8501
+
+
 # Project Description
 This Visualization Project is a Data Analysis Dashboard meant to help the user visualize the input data as clearly as possible. It aims to uncover patterns, anomalies, correlations, and trends in the data, thereby providing valuable insights.
 While the core of the project revolves around data visualization and analysis, it also incorporates elements of simulation to model potential market behaviors and predict outcomes under different scenarios. This simulation aspect is designed to provide a dynamic understanding of how random events or changes in market conditions might affect vehicle pricing, demand, and supply dynamics.
