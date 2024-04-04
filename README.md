@@ -4,6 +4,8 @@ Visualization Project for Data Analysis
 # How to have access to the Dashboard
 You can now view your Streamlit app in your browser.
 
+Render Address: https://data-visualization-app-we3i.onrender.com
+
 Network URL: http://10.214.238.184:8501
 
 External URL: http://44.226.122.3:8501
