@@ -14,7 +14,6 @@ model_price_df = vehicles_df[['model', 'price']]
 grouped_models_data = model_price_df.groupby('model')
 new_df = grouped_models_data.mean()
 new_df = new_df.reset_index()
-new_df
 
 # histogram comparison: Price vs Model
 # create the figure
@@ -26,10 +25,9 @@ st.plotly_chart(fig)
 
 # preparing the data for the scatter plot
 odometer_vs_price_df = vehicles_df[['price', 'odometer']]
-odometer_vs_price_df
 
-#scatter plot comparison: Odometer vs Price
-#create the figure
+# scatter plot comparison: Odometer vs Price
+# create the figure
 fig = px.scatter(odometer_vs_price_df, x='price', y='odometer', title='Odometer vs Price Comparison')
 
 st.write('This is a scatter plot comparison between the odometer and the car price')
@@ -50,5 +48,3 @@ if show_data:
     st.write("We show the chart since the checkbox is been displayed")
 else:
     st.write("Data is hidden since the checkbox is unchecked")
-
-
