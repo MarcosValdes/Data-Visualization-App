@@ -4,6 +4,32 @@ import plotly.express as px
 
 vehicles_df = pd.read_csv('vehicles_us.csv')
 
+# we do some vehicles_df cleaning first:
+
+# we change the 'date_posted' column into a datetime64 data type 
+vehicles_df['date_posted'] = pd.to_datetime(vehicles_df['date_posted'])
+
+
+# we substitute all the NaN values with integer 0
+vehicles_df['is_4wd'] = vehicles_df['is_4wd'].fillna(0)
+
+# we change the datatype of the column to integers 
+vehicles_df['is_4wd'] = vehicles_df['is_4wd'].astype(int)
+
+
+# we fill in model_year missing values with the columns average
+vehicles_df['model_year'] = vehicles_df['model_year'].fillna(vehicles_df['model_year'].median())
+
+# we fill in cylinders missing values
+vehicles_df['cylinders'] = vehicles_df.groupby('model')['cylinders'].fillna(vehicles_df['cylinders'].median())
+
+# we fill in odometer missing values
+vehicles_df['odometer'] = vehicles_df.groupby('model')['odometer'].fillna(vehicles_df['odometer'].median())
+
+# we fill in paint_color missing values
+vehicles_df['paint_color'] = vehicles_df['paint_color'].fillna('unknown')
+
+
 st.header('My Data Visualization Dashboard')
 
 st.write('This is my vehicles DataFrame')
